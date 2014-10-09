@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module PetRescue
   # A listing page on petrescue.com.au
   class ListingPage
