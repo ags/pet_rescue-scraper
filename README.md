@@ -1,6 +1,6 @@
 # PetRescue::Scraper
 
-TODO: Write a gem description
+A screen scraper for [petrescue.com.au](http://www.petrescue.com.au/).
 
 ## Installation
 
@@ -20,11 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently only scraping dog listings is supported.
+
+```ruby
+require 'pet_rescue/scraper'
+
+dog_listings = PetRescue::Scraper::DogListings.new
+dog_listings.take(10).each do |listing_page|
+  pet = listing_page.pet
+  puts "#{pet.name} - #{pet.breed}"
+end
+```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/pet_rescue-scraper/fork )
+1. Fork it ( https://github.com/ags/pet_rescue-scraper/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
