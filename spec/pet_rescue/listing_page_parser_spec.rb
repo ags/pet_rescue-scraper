@@ -131,10 +131,18 @@ describe PetRescue::ListingPageParser do
       expect(pet.contact_number).to eq("0410510308")
     end
 
-    it "returns nil when a contact number is not specified" do
+    it "handles the absence of a contact number" do
       pet = parser.parse(read_fixture("mau.html"))
 
       expect(pet.contact_number).to eq(nil)
+    end
+
+    it "extracts whether the pet has been adopted or not"  do
+      pet = parser.parse(read_fixture("wyatt.html"))
+      expect(pet.rescued?).to eq(false)
+
+      pet = parser.parse(read_fixture("jazmine.html"))
+      expect(pet.rescued?).to eq(true)
     end
   end
 end

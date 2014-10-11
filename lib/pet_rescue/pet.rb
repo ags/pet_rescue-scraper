@@ -22,5 +22,6 @@ module PetRescue
     attribute :contact_number,    String
     attribute :small_photo_url,   String
     attribute :large_photo_url,   String
+    attribute :rescued,           Boolean
   end
 end

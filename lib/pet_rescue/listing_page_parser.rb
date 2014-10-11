@@ -22,7 +22,8 @@ module PetRescue
               adoption_fee: pet_adoption_fee,
               adoption_process: pet_adoption_process,
               contact_name: pet_contact_name,
-              contact_number: pet_contact_number)
+              contact_number: pet_contact_number,
+              rescued: pet_rescued?)
     end
 
     def pet_name
@@ -91,6 +92,10 @@ module PetRescue
 
     def pet_large_photo_url
       photo_node && photo_node.at_css("a").attributes["href"].value
+    end
+
+    def pet_rescued?
+      !!@document.at_css(".adopt_this_pet_container .rehomed")
     end
 
     private
