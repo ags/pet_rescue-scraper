@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PetRescue::Scraper::VERSION
   spec.authors       = ["Alex Smith"]
   spec.email         = ["alex@thatalexguy.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Scraper for petrescue.com.au}
+  spec.description   = %q{Allows scraping of pet listings from petrescue.com.au}
   spec.homepage      = ""
   spec.license       = "MIT"
 
