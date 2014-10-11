@@ -1,4 +1,4 @@
-# PetRescue::Scraper
+# PetRescue::Scraper [![Circle CI](https://circleci.com/gh/ags/pet_rescue-scraper.png?style=badge)](https://circleci.com/gh/ags/pet_rescue-scraper)
 
 A screen scraper for [petrescue.com.au](http://www.petrescue.com.au/).
 
