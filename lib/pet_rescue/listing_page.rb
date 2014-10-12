@@ -5,6 +5,10 @@ module PetRescue
   class ListingPage
     attr_reader :id
 
+    def self.for_listing(id)
+      new(id, ListingPageParser.new)
+    end
+
     def initialize(id, parser)
       @id = id
       @url = "http://www.petrescue.com.au/listings/#{@id}"

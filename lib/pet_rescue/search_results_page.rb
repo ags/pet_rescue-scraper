@@ -15,10 +15,7 @@ module PetRescue
     end
 
     def listing_pages
-      listing_ids.map do |id|
-        parser = PetRescue::ListingPageParser.new
-        ListingPage.new(id, parser)
-      end
+      listing_ids.map { |id| ListingPage.for_listing(id) }
     end
 
     def has_next_page?
